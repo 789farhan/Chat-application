@@ -186,6 +186,8 @@ export const ChatComponent: React.FC = () => {
                   </div>
                 </div>
               </div>
+              <form onSubmit={handleSubmit(sendmsg)}>
+
               <div className="flex flex-row items-center h-16 rounded-xl bg-white w-full px-4">
                 <div>
                   <button
@@ -210,13 +212,11 @@ export const ChatComponent: React.FC = () => {
                 </div>
                 <div className="flex-grow ml-4">
                   <div className="relative w-full">
-                    <form onSubmit={handleSubmit(sendmsg)}>
-                      <input
-                        {...register("msg")}
-                        type="text"
-                        className="flex w-full border rounded-xl focus:outline-none focus:border-indigo-300 pl-4 h-10"
-                      />
-                    </form>
+                    <input
+                      {...register("msg")}
+                      type="text"
+                      className="flex w-full border rounded-xl focus:outline-none focus:border-indigo-300 pl-4 h-10"
+                    />
                     <button
                       title="Subit"
                       className="absolute flex items-center justify-center h-full w-12 right-0 top-0 text-gray-400 hover:text-gray-600"
@@ -260,6 +260,7 @@ export const ChatComponent: React.FC = () => {
                   </button>
                 </div>
               </div>
+              </form>
             </div>
           </div>
         </div>
